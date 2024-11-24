@@ -1,0 +1,18 @@
+# hide config values
+./config.js
+*./config.js
+*config.js
+/config.js
+./config.cjs
+.config.cjs 
+config.cjs
+*config.cjs
+
+# env 
+.env
+./env 
+
+# node_modules
+.node_modules
+./node_modules
+*node_modules
