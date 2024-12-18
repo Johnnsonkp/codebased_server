@@ -103,7 +103,8 @@ app.get("/profile", (req, res) => {
 app.get("/logout", (req, res, next) => {
   req.logout((err) => {
     if (err) return next(err);
-    res.redirect("/");
+    // res.redirect("/");
+    res.send("success")
   });
 });
 
@@ -138,14 +139,14 @@ app.get("/api/repos", (req, res) => {
       UserAgent: "Johnsonkp",
       headers: headerOptions,
       }).then(response => {
-          if(response.data){
-            response.data.forEach((title) => {
-              if(title.name && title.name[title.name.length - 1] == "c" && !title.name.includes("main")){
-                codeChallengeTitles.push(title.name);
-              }
-            })
-          }
-          res.send(codeChallengeTitles);
+        if(response.data){
+          response.data.forEach((title) => {
+            if(title.name && title.name[title.name.length - 1] == "c" && title.name[title.name.length - 2] == "." && !title.name.includes("main")){
+              codeChallengeTitles.push(title.name);
+            }
+          })
+        }
+        res.send(codeChallengeTitles);
       }).catch(err => {
           res.send(err);
       });
@@ -153,6 +154,21 @@ app.get("/api/repos", (req, res) => {
 });
 
 app.get("/api/repos/all", (req, res) => {
+  let dirArr = []
+  axios({
+      method: "get",
+      url: `https://api.github.com/repos/${process.env.VITE_APP_GITHUB_USERNAME}`,
+      UserAgent: "Johnsonkp",
+      headers: headerOptions2,
+  }).then(response => {
+    // console.log("response data", response.data)
+    res.send(response.data);
+  }).catch(err => {
+      res.send(err);
+  });
+});
+
+app.get("/api/repos/default", (req, res) => {
   let dirArr = []
   axios({
       method: "get",
@@ -170,6 +186,7 @@ app.get("/api/repos/all", (req, res) => {
       res.send(err);
   });
 });
+
 
 app.get("/api/user_info", (req, res) => {
   axios({
