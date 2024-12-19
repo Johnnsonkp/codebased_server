@@ -9,7 +9,7 @@ import express from 'express';
 const required = createRequire(import.meta.url);
 required('dotenv').config();
 const GitHubStrategy = required("passport-github2").Strategy;
-const session = required("express-session");
+const session = required("cookie-session");
 const passport = required("passport");
 const app = express();
 let codeChallengeTitles = []
