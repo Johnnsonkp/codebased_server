@@ -49,13 +49,6 @@ const handleLogin = async (access_token) => {
   return data;
 };
 
-// passport.serializeUser((user, done) => {
-//   done(null, user);
-// });
-// passport.deserializeUser((user, done) => {
-//   done(null, user);
-// });
-
 app.get('/', (req, res) => {
   res.send(
     `<div style={{display: 'flex'}}>
