@@ -35,6 +35,7 @@ const handleLogin = async (access_token) => {
   const response = await fetch('https://api.github.com/user', {
     method: 'GET',
     headers: { 
+      "Access-Control-Allow-Origin": "*",
       "Accept": "application/vnd.github+json",
       'X-GitHub-Api-Version': '2022-11-28',
       "Authorization": `Bearer ${access_token}`
