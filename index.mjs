@@ -94,7 +94,6 @@ app.get("/profile", (req, res) => {
 app.get("/logout", (req, res, next) => {
   req.logout((err) => {
     if (err) return next(err);
-    // res.redirect("/");
     res.send("success")
   });
 });
@@ -152,7 +151,6 @@ app.get("/api/repos/all", (req, res) => {
       UserAgent: "Johnsonkp",
       headers: headerOptions2,
   }).then(response => {
-    // console.log("response data", response.data)
     res.send(response.data);
   }).catch(err => {
       res.send(err);
