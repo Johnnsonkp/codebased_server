@@ -2,10 +2,8 @@ import { headerOptions, headerOptions2, headerOptions3 } from "./headers.js";
 
 import axios from "axios";
 import bodyParser from "body-parser";
-import config from "./config.cjs";
 import cors from "cors";
 import { createRequire } from 'module';
-// import dotenv from 'dotenv'
 import express from 'express';
 
 const required = createRequire(import.meta.url);
