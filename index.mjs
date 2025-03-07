@@ -97,6 +97,7 @@ const handleLogin = async (access_token) => {
   }
   const data = await response.json();
   console.log("response data:", data)
+  return data
   
   if (data){
     User = [{
