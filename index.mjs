@@ -96,7 +96,7 @@ const handleLogin = async (access_token) => {
     return;
   }
   const data = await response.json();
-  console.log("response data:", data)
+  // console.log("response data:", data)
   return data
   
   if (data){
