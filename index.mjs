@@ -163,7 +163,9 @@ app.post('/auth/github/callback' , async (req, res) => {
   const accessToken = tokenData.access_token;
 
   if (accessToken) {
-      handleLogin(accessToken).then((data) => res.send(data));
+      const data = await handleLogin(accessToken);
+      res.send(data);
+      // .then((data) => res.send(data));
       // handleLogin(accessToken)
   } else {
       res.json({ success: false });
