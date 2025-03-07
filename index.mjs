@@ -3,6 +3,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import { createRequire } from 'module';
 import express from 'express';
+// import { user_model } from "./models/User.tsx";
+import { user_model } from "./models/User.js";
 
 const required = createRequire(import.meta.url);
 required('dotenv').config();
@@ -79,8 +81,6 @@ passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
-
-
 const handleLogin = async (access_token) => {
   const response = await fetch('https://api.github.com/user', {
     method: 'GET',
@@ -108,21 +108,31 @@ const handleLogin = async (access_token) => {
       following: data.following,
       public_repos: data.public_repos,
     }]
-    User_info = [{ access_token: access_token }];
-    return User[0];
+    // user_model = User
+    // user_model = [{
+    //   id: 1,
+    //   github_id: data.id,
+    //   avatar_url: data.avatar_url,
+    //   login: data.login,
+    //   name: data.name,
+    //   email: data.email || 'email',
+    //   bio: data.bio,
+    //   location: data.location,
+    //   repos_url: data.repos_url,
+    //   type: data.type,
+    //   followers: data.followers,
+    //   following: data.following,
+    //   public_repos: data.public_repos,
+    //   score: 0
+    // }]
+    // User_info = [{ access_token: access_token }];
+    // return User[0];
+    // console.log("user_model", user_model)
+    // return user_model;
+    console.log("data backend", data)
+    return data
   }
 };
-
-app.get('/', (req, res) => {
-  res.send(
-    `<div style={{display: 'flex'}}>
-      <a href="/api/auth/github">Login with Github</a>
-      <a href="/api/logout">Logout</a>
-      <a href="/profile">Profile</a>
-      <a href="/auth/github/callback">Callback with Github</a>
-    </div>`
-  );
-});
 
 app.get('/api/auth/github', 
   passport.authenticate("github", { scope: ["user:email"] })
@@ -151,7 +161,8 @@ app.post('/auth/github/callback' , async (req, res) => {
   const accessToken = tokenData.access_token;
 
   if (accessToken) {
-      handleLogin(accessToken).then((data) => res.send(data));
+      // handleLogin(accessToken).then((data) => res.send(data));
+      handleLogin(accessToken)
   } else {
       res.json({ success: false });
   }
