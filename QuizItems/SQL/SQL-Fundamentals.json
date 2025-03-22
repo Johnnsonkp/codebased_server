@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "Which SQL statement retrieves all records from a table named 'employees'?",
+    "correct_answer": "SELECT * FROM employees;",
+    "incorrect_answers": ["GET ALL employees;", "FETCH * FROM employees;", "DISPLAY employees;"]
+  },
+  {
+    "id": 2,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "How do you select only unique values from a column named 'department' in a table called 'staff'?",
+    "correct_answer": "SELECT DISTINCT department FROM staff;",
+    "incorrect_answers": ["SELECT UNIQUE department FROM staff;", "SELECT DIFFERENT department FROM staff;", "FETCH DISTINCT department FROM staff;"]
+  },
+  {
+    "id": 3,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "Which SQL clause is used to filter results based on a condition?",
+    "correct_answer": "WHERE",
+    "incorrect_answers": ["HAVING", "FILTER", "LIMIT"]
+  },
+  {
+    "id": 4,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "How do you sort query results in descending order based on a column named 'salary'?",
+    "correct_answer": "ORDER BY salary DESC;",
+    "incorrect_answers": ["SORT BY salary DOWN;", "ARRANGE salary DESCENDING;", "ORDER salary DESCENDING;"]
+  },
+  {
+    "id": 5,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "Which SQL statement retrieves employees whose age is greater than 30?",
+    "correct_answer": "SELECT * FROM employees WHERE age > 30;",
+    "incorrect_answers": ["SELECT * FROM employees HAVING age > 30;", "FILTER employees WHERE age > 30;", "SHOW employees IF age > 30;"]
+  },
+  {
+    "id": 6,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "How do you count the number of records in a table named 'customers'?",
+    "correct_answer": "SELECT COUNT(*) FROM customers;",
+    "incorrect_answers": ["GET COUNT FROM customers;", "COUNT customers;", "SELECT NUMBER FROM customers;"]
+  },
+  {
+    "id": 7,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "What SQL command limits query results to only 5 records?",
+    "correct_answer": "SELECT * FROM employees LIMIT 5;",
+    "incorrect_answers": ["SELECT * FROM employees TOP 5;", "FETCH 5 FROM employees;", "LIMIT ROWS 5 FROM employees;"]
+  },
+  {
+    "id": 8,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "Which SQL statement retrieves records where the 'name' column starts with 'A'?",
+    "correct_answer": "SELECT * FROM users WHERE name LIKE 'A%';",
+    "incorrect_answers": ["SELECT * FROM users WHERE name = 'A%';", "FILTER users WHERE name STARTS 'A';", "SELECT * FROM users HAVING name LIKE 'A%';"]
+  },
+  {
+    "id": 9,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "How do you retrieve all customers except those from 'New York'?",
+    "correct_answer": "SELECT * FROM customers WHERE city <> 'New York';",
+    "incorrect_answers": ["SELECT * FROM customers WHERE city NOT 'New York';", "SHOW customers IF city != 'New York';", "SELECT * FROM customers EXCLUDE city = 'New York';"]
+  },
+  {
+    "id": 10,
+    "topic": "SQL",
+    "subcategory": "SQL Fundamentals",
+    "type": "multiple-choice",
+    "question": "What SQL clause is used to group query results based on a column?",
+    "correct_answer": "GROUP BY",
+    "incorrect_answers": ["SORT BY", "COLLECT BY", "GROUPING"]
+  }
+]

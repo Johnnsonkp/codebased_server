@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which Python framework is known for its simplicity and is often used for small web applications?",
+    "correct_answer": "Flask",
+    "incorrect_answers": ["Django", "FastAPI", "Pyramid"]
+  },
+  {
+    "id": 2,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which command is used to start a new Django project?",
+    "correct_answer": "django-admin startproject myproject",
+    "incorrect_answers": ["django start myproject", "django-admin newproject myproject", "python manage.py startproject myproject"]
+  },
+  {
+    "id": 3,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which file in a Django app defines the database models?",
+    "correct_answer": "models.py",
+    "incorrect_answers": ["views.py", "urls.py", "settings.py"]
+  },
+  {
+    "id": 4,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "In Flask, which function is used to define a URL route?",
+    "correct_answer": "@app.route()",
+    "incorrect_answers": ["route()", "@route()", "url.route()"]
+  },
+  {
+    "id": 5,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "What command is used to run a Flask app?",
+    "correct_answer": "flask run",
+    "incorrect_answers": ["python run.py", "flask start", "run flask"]
+  },
+  {
+    "id": 6,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which ORM does Django use by default?",
+    "correct_answer": "Django ORM",
+    "incorrect_answers": ["SQLAlchemy", "PonyORM", "Tortoise ORM"]
+  },
+  {
+    "id": 7,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which of the following is a valid Django template tag?",
+    "correct_answer": "{% for item in items %}",
+    "incorrect_answers": ["{{ for item in items }}", "<% for item in items %>", "{% loop item in items %}"]
+  },
+  {
+    "id": 8,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which of the following is the default database used in Django?",
+    "correct_answer": "SQLite",
+    "incorrect_answers": ["MySQL", "PostgreSQL", "MongoDB"]
+  },
+  {
+    "id": 9,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which module is commonly used in Python for handling HTTP requests in web applications?",
+    "correct_answer": "requests",
+    "incorrect_answers": ["http.client", "urllib", "flask.requests"]
+  },
+  {
+    "id": 10,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a valid HTTP method?",
+    "correct_answer": "FETCH",
+    "incorrect_answers": ["GET", "POST", "DELETE"]
+  },
+  {
+    "id": 11,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "In Django, where are static files such as CSS and JavaScript stored?",
+    "correct_answer": "static/",
+    "incorrect_answers": ["media/", "templates/", "public/"]
+  },
+  {
+    "id": 12,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which Python package is commonly used for environment variable management in web apps?",
+    "correct_answer": "python-dotenv",
+    "incorrect_answers": ["os", "configparser", "pyenv"]
+  },
+  {
+    "id": 13,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "What does the `render()` function in Django do?",
+    "correct_answer": "Renders an HTML template with context data",
+    "incorrect_answers": ["Sends a JSON response", "Redirects to another URL", "Performs a database query"]
+  },
+  {
+    "id": 14,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a built-in Django class-based view?",
+    "correct_answer": "TableView",
+    "incorrect_answers": ["ListView", "DetailView", "TemplateView"]
+  },
+  {
+    "id": 15,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "What is the default port for running a Django development server?",
+    "correct_answer": "8000",
+    "incorrect_answers": ["8080", "5000", "3000"]
+  },
+  {
+    "id": 16,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which framework is designed for building APIs in Python?",
+    "correct_answer": "FastAPI",
+    "incorrect_answers": ["Django", "Flask", "CherryPy"]
+  },
+  {
+    "id": 17,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "In Flask, how do you retrieve query parameters from a URL?",
+    "correct_answer": "request.args.get('param')",
+    "incorrect_answers": ["request.query['param']", "request.get('param')", "request.params['param']"]
+  },
+  {
+    "id": 18,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which Django middleware is used for handling user sessions?",
+    "correct_answer": "SessionMiddleware",
+    "incorrect_answers": ["AuthMiddleware", "CookiesMiddleware", "SessionHandler"]
+  },
+  {
+    "id": 19,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which of the following is a security feature provided by Django by default?",
+    "correct_answer": "Cross-Site Request Forgery (CSRF) protection",
+    "incorrect_answers": ["SQL Injection Prevention", "End-to-End Encryption", "Firewall Protection"]
+  },
+  {
+    "id": 20,
+    "topic": "Python",
+    "subcategory": "Web Development",
+    "type": "multiple-choice",
+    "question": "Which Django command is used to apply database migrations?",
+    "correct_answer": "python manage.py migrate",
+    "incorrect_answers": ["python manage.py makemigrations", "python manage.py syncdb", "python manage.py create_db"]
+  }
+]

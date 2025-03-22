@@ -1,0 +1,250 @@
+[
+  {
+      "id": 1,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which of the following is a valid way to print 'Hello, World!' in Python?",
+      "correct_answer": "print('Hello, World!')",
+      "incorrect_answers": [
+          "echo 'Hello, World!'",
+          "printf('Hello, World!')",
+          "console.log('Hello, World!'"
+      ]
+  },
+  {
+      "id": 2,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "true-false",
+      "question": "Python is a statically typed language.",
+      "correct_answer": "False",
+      "incorrect_answers": [
+          "True"
+      ]
+  },
+  {
+      "id": 3,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which data type is used to store a sequence of characters in Python?",
+      "correct_answer": "String",
+      "incorrect_answers": [
+          "Integer",
+          "Boolean",
+          "Float"
+      ]
+  },
+  {
+      "id": 4,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "What will `type(10.5)` return?",
+      "correct_answer": "<class 'float'>",
+      "incorrect_answers": [
+          "<class 'int'>",
+          "<class 'double'>",
+          "<class 'decimal'>"
+      ]
+  },
+  {
+      "id": 5,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "true-false",
+      "question": "Python uses indentation to define code blocks.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+          "False"
+      ]
+  },
+  {
+      "id": 6,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which of the following is NOT a valid variable name in Python?",
+      "correct_answer": "2_variable",
+      "incorrect_answers": [
+          "_variable",
+          "variable_name",
+          "Variable2"
+      ]
+  },
+  {
+      "id": 7,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which function is used to take user input in Python?",
+      "correct_answer": "input()",
+      "incorrect_answers": [
+          "scanf()",
+          "get_input()",
+          "read()"
+      ]
+  },
+  {
+      "id": 8,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "true-false",
+      "question": "Python is an interpreted language.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+          "False"
+      ]
+  },
+  {
+      "id": 9,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which keyword is used to define a function in Python?",
+      "correct_answer": "def",
+      "incorrect_answers": [
+          "function",
+          "define",
+          "fn"
+      ]
+  },
+  {
+      "id": 10,
+      "topic": "Python",
+      "subcategory": "Introduction",
+      "type": "multiple-choice",
+      "question": "Which of the following is the correct way to declare a comment in Python?",
+      "correct_answer": "# This is a comment",
+      "incorrect_answers": [
+          "// This is a comment",
+          "/* This is a comment */",
+          "-- This is a comment"
+      ]
+  },
+  {
+    "id": 11,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which symbol is used for single-line comments in Python?",
+    "correct_answer": "#",
+    "incorrect_answers": [
+        "//",
+        "/* */",
+        "--"
+    ]
+},
+{
+    "id": 12,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "true-false",
+    "question": "In Python, lists are mutable.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+},
+{
+    "id": 13,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "What is the correct way to declare a tuple in Python?",
+    "correct_answer": "(1, 2, 3)",
+    "incorrect_answers": [
+        "[1, 2, 3]",
+        "{1, 2, 3}",
+        "'1, 2, 3'"
+    ]
+},
+{
+    "id": 14,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which function is used to determine the length of a list in Python?",
+    "correct_answer": "len()",
+    "incorrect_answers": [
+        "size()",
+        "length()",
+        "count()"
+    ]
+},
+{
+    "id": 15,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "true-false",
+    "question": "A dictionary in Python can have duplicate keys.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+        "True"
+    ]
+},
+{
+    "id": 16,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which method is used to remove the last element from a list?",
+    "correct_answer": "pop()",
+    "incorrect_answers": [
+        "remove()",
+        "delete()",
+        "discard()"
+    ]
+},
+{
+    "id": 17,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which of the following is a valid way to create an empty set in Python?",
+    "correct_answer": "set()",
+    "incorrect_answers": [
+        "{}",
+        "[]",
+        "set([])"
+    ]
+},
+{
+    "id": 18,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "true-false",
+    "question": "In Python, 'elif' is used for an 'else if' condition in control flow.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+},
+{
+    "id": 19,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a valid Python data type?",
+    "correct_answer": "character",
+    "incorrect_answers": [
+        "list",
+        "tuple",
+        "dictionary"
+    ]
+},
+{
+    "id": 20,
+    "topic": "Python",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "What will `print(type(None))` output?",
+    "correct_answer": "<class 'NoneType'>",
+    "incorrect_answers": [
+        "<class 'null'>",
+        "<class 'void'>",
+        "<class 'None'>"
+    ]
+}
+]

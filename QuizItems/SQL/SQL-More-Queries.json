@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that lists all privileges of the MySQL users `user_0d_1` and `user_0d_2` on your server (in `localhost`).",
+    "correct_answer": "SHOW GRANTS FOR 'user_0d_1'@'localhost'; \nSHOW GRANTS FOR 'user_0d_2'@'localhost';"
+  },
+  {
+    "id": 2,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the MySQL server user `user_0d_1` with all privileges and password `user_0d_1_pwd`. If the user exists, the script should not fail.",
+    "correct_answer": "CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' IDENTIFIED BY 'user_0d_1_pwd';\nGRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';"
+  },
+  {
+    "id": 3,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the database `hbtn_0d_2` and the user `user_0d_2` with only SELECT privilege on `hbtn_0d_2`. If they exist, the script should not fail.",
+    "correct_answer": "CREATE DATABASE IF NOT EXISTS `hbtn_0d_2`;\nCREATE USER IF NOT EXISTS 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd';\nGRANT SELECT ON `hbtn_0d_2`.* TO 'user_0d_2'@'localhost';"
+  },
+  {
+    "id": 4,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the table `force_name` with an `id` column (INT) and a `name` column (VARCHAR(256) NOT NULL). If the table exists, the script should not fail.",
+    "correct_answer": "CREATE TABLE IF NOT EXISTS `force_name` ( \n `id` INT, \n `name` VARCHAR(256) NOT NULL \n);"
+  },
+  {
+    "id": 5,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the table `id_not_null` with `id` as INT (default value 1) and `name` as VARCHAR(256). If the table exists, the script should not fail.",
+    "correct_answer": "CREATE TABLE IF NOT EXISTS `id_not_null` ( \n `id` INT NOT NULL DEFAULT 1, \n `name` VARCHAR(256) \n);"
+  },
+  {
+    "id": 6,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the table `unique_id` with `id` as INT (default value 1, unique) and `name` as VARCHAR(256). If the table exists, the script should not fail.",
+    "correct_answer": "CREATE TABLE IF NOT EXISTS `unique_id` ( \n `id` INT NOT NULL DEFAULT 1 UNIQUE, \n `name` VARCHAR(256) \n);"
+  },
+  {
+    "id": 7,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the database `hbtn_0d_usa` and the table `states` with `id` as INT (auto-increment, primary key) and `name` as VARCHAR(256) NOT NULL.",
+    "correct_answer": "CREATE DATABASE IF NOT EXISTS `hbtn_0d_usa`;\nUSE `hbtn_0d_usa`;\nCREATE TABLE IF NOT EXISTS `states` ( \n `id` INT AUTO_INCREMENT PRIMARY KEY, \n `name` VARCHAR(256) NOT NULL \n);"
+  },
+  {
+    "id": 8,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that creates the database `hbtn_0d_usa` and the table `cities` with `id` as INT (auto-increment, primary key), `state_id` as INT (FOREIGN KEY to `states.id`), and `name` as VARCHAR(256) NOT NULL.",
+    "correct_answer": "CREATE DATABASE IF NOT EXISTS `hbtn_0d_usa`;\nUSE `hbtn_0d_usa`;\nCREATE TABLE IF NOT EXISTS `states` ( \n `id` INT AUTO_INCREMENT PRIMARY KEY, \n `name` VARCHAR(256) NOT NULL \n);\nCREATE TABLE IF NOT EXISTS `cities` ( \n `id` INT AUTO_INCREMENT PRIMARY KEY, \n `state_id` INT NOT NULL, \n `name` VARCHAR(256) NOT NULL, \n FOREIGN KEY (`state_id`) REFERENCES `states`(`id`) \n);"
+  },
+  {
+    "id": 9,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that lists all the cities of California from the database `hbtn_0d_usa`, ordered by `cities.id`. Do not use the `JOIN` keyword.",
+    "correct_answer": "SELECT * FROM cities WHERE state_id = (SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;"
+  },
+  {
+    "id": 10,
+    "topic": "SQL",
+    "subcategory": "SQL More Queries",
+    "type": "text-editor",
+    "question": "Write a script that lists all cities contained in the database `hbtn_0d_usa`, displaying `cities.id`, `cities.name`, and `states.name`, ordered by `cities.id`.",
+    "correct_answer": "SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC;"
+  }
+]

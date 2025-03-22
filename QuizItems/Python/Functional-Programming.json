@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What is the output of the following code?\n\n```python\nadd = lambda x, y: x + y\nprint(add(2, 3))\n```",
+    "correct_answer": "5",
+    "incorrect_answers": ["'2 + 3'", "23", "Error"]
+  },
+  {
+    "id": 2,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "Which function is used to apply a function to each element of an iterable?",
+    "correct_answer": "map()",
+    "incorrect_answers": ["filter()", "reduce()", "apply()"]
+  },
+  {
+    "id": 3,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What does the following code return?\n\n```python\nnums = [1, 2, 3, 4]\nsquared = list(map(lambda x: x**2, nums))\nprint(squared)\n```",
+    "correct_answer": "[1, 4, 9, 16]",
+    "incorrect_answers": ["[1, 2, 3, 4]", "[2, 4, 6, 8]", "[1, 8, 27, 64]"]
+  },
+  {
+    "id": 4,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "Which function is used to filter elements from an iterable based on a condition?",
+    "correct_answer": "filter()",
+    "incorrect_answers": ["map()", "reduce()", "select()"]
+  },
+  {
+    "id": 5,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\nnums = [1, 2, 3, 4, 5]\neven_nums = list(filter(lambda x: x % 2 == 0, nums))\nprint(even_nums)\n```",
+    "correct_answer": "[2, 4]",
+    "incorrect_answers": ["[1, 3, 5]", "[1, 2, 3, 4, 5]", "[2, 3, 4]"]
+  },
+  {
+    "id": 6,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "Which module provides the `reduce()` function?",
+    "correct_answer": "functools",
+    "incorrect_answers": ["itertools", "collections", "lambda"]
+  },
+  {
+    "id": 7,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\nfrom functools import reduce\nnums = [1, 2, 3, 4]\nresult = reduce(lambda x, y: x * y, nums)\nprint(result)\n```",
+    "correct_answer": "24",
+    "incorrect_answers": ["10", "1", "Error"]
+  },
+  {
+    "id": 8,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "Which statement is TRUE about Python's functional programming?",
+    "correct_answer": "Functions are first-class citizens in Python.",
+    "incorrect_answers": ["Python does not support functional programming.", "Lambda functions can have multiple statements.", "Functional programming requires OOP."]
+  },
+  {
+    "id": 9,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What is the correct way to define a function that takes another function as an argument?",
+    "correct_answer": "```python\ndef apply_func(f, x):\n    return f(x)\n```",
+    "incorrect_answers": [
+      "```python\ndef apply_func(x, f):\n    return x(f)\n```",
+      "```python\ndef apply_func(f x):\n    return f(x)\n```",
+      "```python\ndef apply_func(f):\n    return x(f)\n```"
+    ]
+  },
+  {
+    "id": 10,
+    "topic": "Python",
+    "subcategory": "Functional Programming",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\ndef outer(x):\n    def inner(y):\n        return x + y\n    return inner\n\nadd_five = outer(5)\nprint(add_five(3))\n```",
+    "correct_answer": "8",
+    "incorrect_answers": ["5", "3", "Error"]
+  }
+]

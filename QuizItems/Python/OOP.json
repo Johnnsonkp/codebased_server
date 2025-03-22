@@ -1,0 +1,374 @@
+[
+  {
+    "id": 1,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which method is called when an object is instantiated in Python?",
+    "correct_answer": "__init__",
+    "incorrect_answers": [
+        "__str__",
+        "__new__",
+        "__del__"
+    ]
+  },
+  {
+      "id": 2,
+      "topic": "Python",
+      "subcategory": "Object-Oriented Programming",
+      "type": "true-false",
+      "question": "Inheritance allows a class to inherit methods and properties from another class.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+          "False"
+      ]
+  },
+  {
+    "id": 3,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "What is the process of creating an object from a class called?",
+    "correct_answer": "Instantiation",
+    "incorrect_answers": [
+        "Initialization",
+        "Encapsulation",
+        "Abstraction"
+    ]
+},
+{
+    "id": 4,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which keyword is used to define a class in Python?",
+    "correct_answer": "class",
+    "incorrect_answers": [
+        "def",
+        "struct",
+        "Class"
+    ]
+},
+{
+    "id": 5,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "Encapsulation helps in restricting direct access to variables in a class.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+},
+{
+    "id": 6,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a fundamental OOP principle?",
+    "correct_answer": "Compilation",
+    "incorrect_answers": [
+        "Encapsulation",
+        "Abstraction",
+        "Polymorphism"
+    ]
+},
+{
+    "id": 7,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which symbol is used to indicate that a variable is intended to be private in Python?",
+    "correct_answer": "_ (single underscore)",
+    "incorrect_answers": [
+        "__ (double underscore)",
+        "$ (dollar sign)",
+        "@ (at symbol)"
+    ]
+},
+{
+    "id": 8,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "What is the term for a function inside a class in Python?",
+    "correct_answer": "Method",
+    "incorrect_answers": [
+        "Attribute",
+        "Procedure",
+        "Constructor"
+    ]
+},
+{
+    "id": 9,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A class in Python can inherit from multiple parent classes.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+},
+{
+    "id": 10,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which method in Python is used to define a string representation of an object?",
+    "correct_answer": "__str__",
+    "incorrect_answers": [
+        "__repr__",
+        "__init__",
+        "__del__"
+    ]
+},
+{
+    "id": 11,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which of the following best describes polymorphism?",
+    "correct_answer": "The ability of different objects to respond to the same method",
+    "incorrect_answers": [
+        "Restricting access to certain attributes",
+        "Deriving a class from another class",
+        "Binding data and methods together"
+    ]
+},
+{
+    "id": 12,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which function is used to check if an object is an instance of a specific class?",
+    "correct_answer": "isinstance()",
+    "incorrect_answers": [
+        "issubclass()",
+        "type()",
+        "hasattr()"
+    ]
+},
+{
+    "id": 13,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A class with at least one abstract method must be instantiated before use.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+        "True"
+    ]
+},
+{
+    "id": 14,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "What is the purpose of the 'super()' function in Python?",
+    "correct_answer": "To call a method from the parent class",
+    "incorrect_answers": [
+        "To define a superclass",
+        "To create a new instance of a class",
+        "To override a method"
+    ]
+},
+{
+    "id": 15,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which method is used to delete an object in Python?",
+    "correct_answer": "__del__",
+    "incorrect_answers": [
+        "delete()",
+        "destroy()",
+        "remove()"
+    ]
+},
+{
+    "id": 16,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A child class can override a method from its parent class.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+},
+{
+    "id": 17,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which keyword is used for inheritance in Python?",
+    "correct_answer": "class ChildClass(ParentClass):",
+    "incorrect_answers": [
+        "inherit ParentClass",
+        "extends ParentClass",
+        "ChildClass inherits ParentClass"
+    ]
+},
+{
+    "id": 18,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which built-in function can be used to check if a class is a subclass of another?",
+    "correct_answer": "issubclass()",
+    "incorrect_answers": [
+        "isinstance()",
+        "super()",
+        "type()"
+    ]
+},
+{
+    "id": 19,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A class can only have one constructor method.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+        "True"
+    ]
+},
+  {
+      "id": 20,
+      "topic": "Python",
+      "subcategory": "Object-Oriented Programming",
+      "type": "multiple-choice",
+      "question": "What will `print(MyClass.__name__)` output if `MyClass` is a defined class?",
+      "correct_answer": "MyClass",
+      "incorrect_answers": [
+          "Class",
+          "myclass",
+          "Object"
+      ]
+  },
+  {
+    "id": 21,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which of the following correctly defines a class in Python?",
+    "correct_answer": "class MyClass:",
+    "incorrect_answers": [
+        "define MyClass:",
+        "class = MyClass:",
+        "MyClass class:"
+    ]
+  },
+  {
+    "id": 22,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which of these statements correctly creates an instance of a class?",
+    "correct_answer": "obj = MyClass()",
+    "incorrect_answers": [
+        "obj == MyClass",
+        "MyClass(obj)",
+        "class obj = MyClass()"
+    ]
+  },
+  {
+    "id": 23,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A method with the @staticmethod decorator can access instance attributes.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+        "True"
+    ]
+  },
+  {
+    "id": 24,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "How do you define a private method in a Python class?",
+    "correct_answer": "def __my_method(self):",
+    "incorrect_answers": [
+        "def _my_method(self):",
+        "private def my_method(self):",
+        "def my_method(self, private=True):"
+    ]
+  },
+  {
+    "id": 25,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which method is used to compare two objects in Python?",
+    "correct_answer": "__eq__",
+    "incorrect_answers": [
+        "__cmp__",
+        "__compare__",
+        "__check__"
+    ]
+  },
+  {
+    "id": 26,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "In Python, a class can have multiple constructors defined with different parameters.",
+    "correct_answer": "False",
+    "incorrect_answers": [
+        "True"
+    ]
+  },
+  {
+    "id": 27,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "What does the following code print?\n\n```python\nclass A:\n    def show(self):\n        print('A')\n\nclass B(A):\n    def show(self):\n        print('B')\n\nobj = B()\nobj.show()\n```",
+    "correct_answer": "B",
+    "incorrect_answers": [
+        "A",
+        "None",
+        "Error"
+    ]
+  },
+  {
+    "id": 28,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "Which of the following statements about Python classes is TRUE?",
+    "correct_answer": "A class can have both instance and class methods.",
+    "incorrect_answers": [
+        "All class attributes must be private.",
+        "A class cannot have more than one method.",
+        "Methods in a class cannot have parameters."
+    ]
+  },
+  {
+    "id": 29,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "true-false",
+    "question": "A class variable is shared among all instances of a class.",
+    "correct_answer": "True",
+    "incorrect_answers": [
+        "False"
+    ]
+  },
+  {
+    "id": 30,
+    "topic": "Python",
+    "subcategory": "Object-Oriented Programming",
+    "type": "multiple-choice",
+    "question": "What will the following code output?\n\n```python\nclass A:\n    def __init__(self):\n        self.value = 10\n\nobj1 = A()\nobj2 = A()\nobj1.value = 20\nprint(obj2.value)\n```",
+    "correct_answer": "10",
+    "incorrect_answers": [
+        "20",
+        "Error",
+        "None"
+    ]
+  }
+]

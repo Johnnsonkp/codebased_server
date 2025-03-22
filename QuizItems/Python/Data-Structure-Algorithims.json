@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the time complexity of searching for an element in an unsorted list?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"]
+  },
+  {
+    "id": 2,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which data structure follows the Last In, First Out (LIFO) principle?",
+    "correct_answer": "Stack",
+    "incorrect_answers": ["Queue", "Linked List", "Heap"]
+  },
+  {
+    "id": 3,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\nfrom collections import deque\nqueue = deque([1, 2, 3])\nqueue.popleft()\nprint(queue)\n```",
+    "correct_answer": "deque([2, 3])",
+    "incorrect_answers": ["deque([1, 2])", "deque([3])", "[2, 3]"]
+  },
+  {
+    "id": 4,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which sorting algorithm has the worst-case time complexity of O(n^2)?",
+    "correct_answer": "Bubble Sort",
+    "incorrect_answers": ["Merge Sort", "Quick Sort", "Radix Sort"]
+  },
+  {
+    "id": 5,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the time complexity of inserting an element at the beginning of a Python list?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": ["O(1)", "O(log n)", "O(n^2)"]
+  },
+  {
+    "id": 6,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the output of the following code?\n\n```python\nstack = []\nstack.append(10)\nstack.append(20)\nstack.pop()\nprint(stack)\n```",
+    "correct_answer": "[10]",
+    "incorrect_answers": ["[20]", "[10, 20]", "[]"]
+  },
+  {
+    "id": 7,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a self-balancing binary search tree?",
+    "correct_answer": "Binary Heap",
+    "incorrect_answers": ["Red-Black Tree", "AVL Tree", "B-Tree"]
+  },
+  {
+    "id": 8,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which Python module provides a built-in implementation of a priority queue?",
+    "correct_answer": "heapq",
+    "incorrect_answers": ["queue", "collections", "functools"]
+  },
+  {
+    "id": 9,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\nimport heapq\nheap = []\nheapq.heappush(heap, 5)\nheapq.heappush(heap, 2)\nheapq.heappush(heap, 8)\nprint(heap[0])\n```",
+    "correct_answer": "2",
+    "incorrect_answers": ["5", "8", "[2, 5, 8]"]
+  },
+  {
+    "id": 10,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which of the following searching algorithms is NOT comparison-based?",
+    "correct_answer": "Hashing",
+    "incorrect_answers": ["Binary Search", "Quick Sort", "Merge Sort"]
+  },
+  {
+    "id": 11,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the best-case time complexity of Quick Sort?",
+    "correct_answer": "O(n log n)",
+    "incorrect_answers": ["O(n^2)", "O(n)", "O(1)"]
+  },
+  {
+    "id": 12,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which algorithm is used for finding the shortest path in a weighted graph?",
+    "correct_answer": "Dijkstra's Algorithm",
+    "incorrect_answers": ["Breadth-First Search", "Depth-First Search", "Prim's Algorithm"]
+  },
+  {
+    "id": 13,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the output of the following code?\n\n```python\ndef factorial(n):\n    return 1 if n == 0 else n * factorial(n - 1)\nprint(factorial(4))\n```",
+    "correct_answer": "24",
+    "incorrect_answers": ["16", "10", "120"]
+  },
+  {
+    "id": 14,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which data structure is best suited for implementing recursion?",
+    "correct_answer": "Stack",
+    "incorrect_answers": ["Queue", "Linked List", "Heap"]
+  },
+  {
+    "id": 15,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What is the time complexity of merging two sorted lists of size n?",
+    "correct_answer": "O(n)",
+    "incorrect_answers": ["O(1)", "O(n log n)", "O(n^2)"]
+  },
+  {
+    "id": 16,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which algorithm is used in the Python built-in `sort()` function?",
+    "correct_answer": "Timsort",
+    "incorrect_answers": ["Merge Sort", "Quick Sort", "Heap Sort"]
+  },
+  {
+    "id": 17,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which data structure allows constant-time lookup but requires additional space?",
+    "correct_answer": "Hash Table",
+    "incorrect_answers": ["Array", "Linked List", "Queue"]
+  },
+  {
+    "id": 18,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "What will be the output of the following code?\n\n```python\nmy_dict = {'a': 1, 'b': 2}\nprint(my_dict.get('c', 0))\n```",
+    "correct_answer": "0",
+    "incorrect_answers": ["None", "KeyError", "2"]
+  },
+  {
+    "id": 19,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which algorithm is most efficient for finding the median in an unsorted list?",
+    "correct_answer": "QuickSelect",
+    "incorrect_answers": ["Merge Sort", "Binary Search", "Bubble Sort"]
+  },
+  {
+    "id": 20,
+    "topic": "Python",
+    "subcategory": "Data Structures & Algorithms",
+    "type": "multiple-choice",
+    "question": "Which of the following is NOT a valid tree traversal method?",
+    "correct_answer": "Reverse-Level Order",
+    "incorrect_answers": ["Inorder", "Preorder", "Postorder"]
+  }
+]

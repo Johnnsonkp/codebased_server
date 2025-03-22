@@ -2,7 +2,9 @@ import axios from "axios";
 import bodyParser from "body-parser";
 import cors from "cors";
 import { createRequire } from 'module';
+import { dirname } from "path";
 import express from 'express';
+import { fileURLToPath } from "url";
 // import { user_model } from "./models/User.tsx";
 import { user_model } from "./models/User.js";
 
@@ -14,7 +16,12 @@ const url = required('url');
 // const session = required("session");
 const passport = required("passport");
 const app = express();
-let codeChallengeTitles = []
+const fs = required("fs");
+const path = required("path");
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const QUIZ_FOLDER = path.join(__dirname, "QuizItems");
 
 app.use(cors());
 app.use(session({secret: "secret", resave: false, saveUninitialized: true,}));
@@ -22,6 +29,64 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+app.get("/api/quiz-items/categories", (req, res) => {
+  try{
+    const categories = fs.readdirSync(QUIZ_FOLDER).filter(folder =>
+      fs.statSync(path.join(QUIZ_FOLDER, folder)).isDirectory()
+    );
+    res.send(categories);
+  }catch (error){
+    console.error("Error fetching categories:", error);
+  }
+})
+
+app.post("/api/quiz-items/quizes", (req, res) => {
+  const category = req.body.category
+  const categoryPath = path.join(QUIZ_FOLDER, category);
+  
+  try{
+    const files = fs.readdirSync(categoryPath);
+    const jsonFiles = files.filter(file => file.endsWith(".json"));
+    
+    const jsonData = jsonFiles.map(file => {
+      const filePath = path.join(categoryPath, file);
+      const content = fs.readFileSync(filePath, "utf8");
+
+      return JSON.parse(content);
+  });
+  // console.log("json", jsonData)
+  res.json(jsonData);
+  
+  }catch (error){
+    console.error("Error fetching categories:", error);
+  }
+})
+
+app.post("/api/quiz-items/selected-quiz", (req, res) => {
+  const category = req.body.category
+  const categoryPath = path.join(QUIZ_FOLDER, category);
+  
+  try{
+    if (!fs.existsSync(categoryPath)) {
+      return res.status(404).json({ error: "Category not found." });
+    }
+    
+    const files = fs.readdirSync(categoryPath);
+    const jsonFiles = files.filter(file => file.endsWith(".json"));
+    
+    const jsonData = jsonFiles.map(file => {
+      const filePath = path.join(categoryPath, file);
+      const content = fs.readFileSync(filePath, "utf8");
+      return JSON.parse(content);
+    });
+
+    res.json(jsonData);
+  } catch (error){
+    console.error("Error fetching categories:", error);
+    res.status(500).json({ error: "Internal server error." });
+  }
+})
 
 let User = [];
 let User_info = [];
@@ -61,26 +126,6 @@ const headerOptions2 = {
   'X-Github-Api-Version': '2022-11-28'
 }
 
-
-passport.use(new GitHubStrategy({
-  clientID: process.env.VITE_STAGE_GITHUB_CLIENT_ID,
-  clientSecret: process.env.VITE_STAGE_GITHUB_SECRET_KEY,
-  callbackURL: process.env.VITE_STAGE_CALLBACK_URL,
-},
-  (accessToken, refreshToken, profile, done, cb, request) => {
-    // return cb(null, profile);
-    return done(null, profile);
-  }
-));
-
-passport.serializeUser((user, done) => {
-  done(null, user);
-});
-
-passport.deserializeUser((obj, done) => {
-  done(null, obj);
-});
-
 const handleLogin = async (access_token) => {
   const response = await fetch('https://api.github.com/user', {
     method: 'GET',
@@ -96,44 +141,7 @@ const handleLogin = async (access_token) => {
     return;
   }
   const data = await response.json();
-  // console.log("response data:", data)
   return data
-  
-  if (data){
-    User = [{
-      avatar_url: data.avatar_url,
-      login: data.login,
-      name: data.name,
-      id: data.id,
-      type: data.type,
-      followers: data.followers,
-      following: data.following,
-      public_repos: data.public_repos,
-    }]
-    // user_model = User
-    // user_model = [{
-    //   id: 1,
-    //   github_id: data.id,
-    //   avatar_url: data.avatar_url,
-    //   login: data.login,
-    //   name: data.name,
-    //   email: data.email || 'email',
-    //   bio: data.bio,
-    //   location: data.location,
-    //   repos_url: data.repos_url,
-    //   type: data.type,
-    //   followers: data.followers,
-    //   following: data.following,
-    //   public_repos: data.public_repos,
-    //   score: 0
-    // }]
-    // User_info = [{ access_token: access_token }];
-    // return User[0];
-    // console.log("user_model", user_model)
-    // return user_model;
-    console.log("data backend", data)
-    return data
-  }
 };
 
 app.get('/api/auth/github', 
@@ -165,26 +173,8 @@ app.post('/auth/github/callback' , async (req, res) => {
   if (accessToken) {
       const data = await handleLogin(accessToken);
       res.send(data);
-      // .then((data) => res.send(data));
-      // handleLogin(accessToken)
   } else {
       res.json({ success: false });
-  }
-});
-
-
-app.get("/profile", (req, res) => {
-  if (req.isAuthenticated()) { // Check if the user is authenticated
-    // const user = JSON.stringify(req.user);
-    const user = req.user;
-
-    res.send(`
-      <h1>Profile</h1>
-      <p>Hello, ${user.username}!</p>
-      <p>Hello, ${user.access_token}!</p>
-      <p>Hello, ${user}!</p>
-      <a href="/api/logout">Logout</a>
-    `);
   }
 });
 
@@ -233,7 +223,7 @@ app.get("/api/repos", (req, res) => {
   dir_files.files = [];
 
   if(selectedRepo){
-    codeChallengeTitles = []
+    let codeChallengeTitles = []
     axios({
       method: "get",
       url: url,
@@ -266,7 +256,7 @@ app.get("/api/repos/selected_dir", (req, res) => {
   dir_files.files = [];
 
   if(selected_dir){
-    codeChallengeTitles = []
+    let codeChallengeTitles = []
     
     axios({
       method: "get",
@@ -278,9 +268,12 @@ app.get("/api/repos/selected_dir", (req, res) => {
           response.data.forEach((title) => {
             if (title.name && title.type == 'file'){
               dir_files.files.push(title.name)
+              // dir_files.files.push({name: title.name, type: "file"})
             }
             if (title.name && title.type == 'dir') {
               dir_files.directories.push(title.name)
+
+              // dir_files.directories.push({name: title.name, type: "directory"})
             }
           })
         }
@@ -364,7 +357,6 @@ app.get("/api/user_info", (req, res) => {
       res.send(err);
   });
 });
-
 
 app.get("/api", (req, response) => {
   response.json({message: "Connected to node server"});

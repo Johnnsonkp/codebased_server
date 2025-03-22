@@ -1,0 +1,109 @@
+[
+  {
+    "id": 1,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL command lists all databases in MySQL?",
+    "correct_answer": "SHOW DATABASES;",
+    "incorrect_answers": ["LIST DATABASES;", "GET DATABASES;", "DISPLAY DATABASES;"]
+  },
+  {
+    "id": 2,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "How do you create a new database named 'my_database' in SQL?",
+    "correct_answer": "CREATE DATABASE my_database;",
+    "incorrect_answers": [
+      "MAKE DATABASE my_database;",
+      "NEW DATABASE my_database;",
+      "ADD DATABASE my_database;"
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL command deletes the database 'my_database'?",
+    "correct_answer": "DROP DATABASE my_database;",
+    "incorrect_answers": ["DELETE DATABASE my_database;", "REMOVE DATABASE my_database;", "CLEAR DATABASE my_database;"]
+  },
+  {
+    "id": 4,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which command selects a database to use in MySQL?",
+    "correct_answer": "USE my_database;",
+    "incorrect_answers": ["SET DATABASE my_database;", "SELECT my_database;", "LOAD DATABASE my_database;"]
+  },
+  {
+    "id": 5,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL command lists all tables in the current database?",
+    "correct_answer": "SHOW TABLES;",
+    "incorrect_answers": ["LIST TABLES;", "DISPLAY TABLES;", "GET TABLES;"]
+  },
+  {
+    "id": 6,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "How do you display the structure of a table named 'users'?",
+    "correct_answer": "DESCRIBE users;",
+    "incorrect_answers": ["SHOW STRUCTURE users;", "TABLE INFO users;", "EXPLAIN users;"]
+  },
+  {
+    "id": 7,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL command displays the CREATE statement for a table named 'employees'?",
+    "correct_answer": "SHOW CREATE TABLE employees;",
+    "incorrect_answers": ["DISPLAY CREATE TABLE employees;", "LIST CREATE TABLE employees;", "GET CREATE TABLE employees;"]
+  },
+  {
+    "id": 8,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which command provides a detailed list of all tables including their types?",
+    "correct_answer": "SHOW FULL TABLES;",
+    "incorrect_answers": ["LIST FULL TABLES;", "DISPLAY ALL TABLES;", "SHOW EXTENDED TABLES;"]
+  },
+  {
+    "id": 9,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "How do you retrieve all records from the 'customers' table?",
+    "correct_answer": "SELECT * FROM customers;",
+    "incorrect_answers": ["FETCH ALL FROM customers;", "GET customers;", "LIST customers;"]
+  },
+  {
+    "id": 10,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL command inserts a new row into the 'users' table?",
+    "correct_answer": "INSERT INTO users (name, age) VALUES ('John', 30);",
+    "incorrect_answers": [
+      "ADD INTO users (name, age) VALUES ('John', 30);",
+      "NEW RECORD users (name, age) VALUES ('John', 30);",
+      "PUT INTO users (name, age) VALUES ('John', 30);"
+    ]
+  },
+  {
+    "id": 11,
+    "topic": "SQL",
+    "subcategory": "Introduction",
+    "type": "multiple-choice",
+    "question": "Which SQL keyword is used to prevent duplicate values in a SELECT statement?",
+    "correct_answer": "DISTINCT",
+    "incorrect_answers": ["UNIQUE", "REMOVE_DUPLICATES", "FILTER"]
+  }
+]

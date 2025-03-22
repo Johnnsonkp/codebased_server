@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which SQL data type is best suited for storing a fixed-length string?",
+    "correct_answer": "CHAR",
+    "incorrect_answers": ["VARCHAR", "TEXT", "STRING"]
+  },
+  {
+    "id": 2,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which data type is used to store large text data in SQL?",
+    "correct_answer": "TEXT",
+    "incorrect_answers": ["STRING", "VARCHAR", "CHAR"]
+  },
+  {
+    "id": 3,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "What is the recommended SQL data type for storing monetary values?",
+    "correct_answer": "DECIMAL",
+    "incorrect_answers": ["FLOAT", "DOUBLE", "MONEY"]
+  },
+  {
+    "id": 4,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which data type should you use for storing a date without a time component?",
+    "correct_answer": "DATE",
+    "incorrect_answers": ["DATETIME", "TIMESTAMP", "TIME"]
+  },
+  {
+    "id": 5,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which SQL data type is best for storing whole numbers?",
+    "correct_answer": "INT",
+    "incorrect_answers": ["FLOAT", "DECIMAL", "NUMBER"]
+  },
+  {
+    "id": 6,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which SQL data type should be used to store true/false values?",
+    "correct_answer": "BOOLEAN",
+    "incorrect_answers": ["BIT", "TINYINT", "ENUM"]
+  },
+  {
+    "id": 7,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which data type allows storage of variable-length strings?",
+    "correct_answer": "VARCHAR",
+    "incorrect_answers": ["CHAR", "TEXT", "STRING"]
+  },
+  {
+    "id": 8,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which SQL data type is used for storing timestamps?",
+    "correct_answer": "TIMESTAMP",
+    "incorrect_answers": ["DATE", "DATETIME", "TIME"]
+  },
+  {
+    "id": 9,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "What is the maximum character length of a VARCHAR column in most databases?",
+    "correct_answer": "255",
+    "incorrect_answers": ["100", "500", "1024"]
+  },
+  {
+    "id": 10,
+    "topic": "SQL",
+    "subcategory": "SQL Data Types",
+    "type": "multiple-choice",
+    "question": "Which data type is best for storing large binary data such as images?",
+    "correct_answer": "BLOB",
+    "incorrect_answers": ["TEXT", "VARBINARY", "LONGTEXT"]
+  }
+]
