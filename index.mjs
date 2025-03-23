@@ -187,11 +187,26 @@ app.get("/api/logout", (req, res, next) => {
   });
 });
 
-app.get("/api/repos/challenge", (req, res) => {
-  let selectedChallenge = req.query.selectedChallenge;
-  const select = req.query.selected_Repo;
-  let directory = req.query.directory;
-  const url = `https://api.github.com/repos/${process.env.VITE_APP_GITHUB_USERNAME}/${directory}/contents${select}${selectedChallenge}`
+const getCodeChallenge = (response ) => {
+  const url = response.config.url;
+  const urlParts = url.split('/');
+  const repository = `${urlParts[5]}`;
+  const directory = urlParts[7] && urlParts[8]? urlParts[7] : "";
+  const file = urlParts[urlParts.length - 1]; 
+  const directoryPath = directory ? directory : '';
+  
+  return {
+    directory: directoryPath,
+    repository,
+    file,
+    url,
+    data: response.data
+  };
+}
+
+app.post("/api/repos/challenge", (req, res) => {
+  const {selectedChallenge, selected_Repo, directory} = req.body;
+  const url = `https://api.github.com/repos/${process.env.VITE_APP_GITHUB_USERNAME}/${directory}/contents${selected_Repo}${selectedChallenge}`
 
   if(selectedChallenge  ){
     axios({
@@ -199,16 +214,20 @@ app.get("/api/repos/challenge", (req, res) => {
       url: url,
       UserAgent: `${process.env.VITE_APP_GITHUB_USERNAME}`,
       headers: headerOptions,
-      }).then(response => {
-          if(response.data){
-            res.send(response.data);
+      })
+      .then(response => {
+        if(response.status == 200){
+          const data = getCodeChallenge(response)
+          if (!data) {
+            return res.status(400).json({ error: "Invalid GitHub file URL" });
           }
+          res.json(data)
+        }
       }).catch(err => {
           console.log("url", url);
           res.send(err);
       });
   }
-  
 });
 
 
